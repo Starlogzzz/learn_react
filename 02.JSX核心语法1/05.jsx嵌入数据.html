@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="../react/react.development.js"></script>
+  <script src="../react/react-dom.development.js"></script>
+  <script src="../react/babel.min.js"></script>
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor(){
+        super();
+
+        this.state = {
+          name: "last,xuan",
+          age: 18,
+          arr: ["芜湖","沙口","小丑"],
+        
+          test: null, // 在{}中不显示，会被忽略
+          test1: undefined, // 在{}中不显示，会被忽略
+          test2: true, // 在{}中不显示，会被忽略
+        }
+      }
+      render() {
+        return (
+          <div>
+            <p>{this.state.name}</p>
+            <p>{this.state.age}</p>
+            <p>{this.state.arr}</p>
+            <p>{this.state.test + ''}</p>
+            <p>{this.state.test1 + ''}</p>
+            <p>{this.state.test2.toString()}</p>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(<App/>, document.querySelector("#app"))
+  </script>
+</body>
+</html>

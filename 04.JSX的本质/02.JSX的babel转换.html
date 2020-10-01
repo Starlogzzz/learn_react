@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="../react/react.development.js"></script>
+  <script src="../react/react-dom.development.js"></script>
+  <script src="../react/babel.min.js"></script>
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor() {
+        super();
+
+        this.state = {
+
+        }
+      }
+      render() {
+        return (
+          // <div>
+          //   <h2>我是h2</h2>
+          //   <div>
+          //     <p>芜湖</p>
+          //     <h2>起飞</h2>  
+          //   </div>
+          //   <button>按钮</button>
+          //   <a href="http://www.baidu.com">百度</a>
+          // </div>
+          /*#__PURE__*/
+          React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "\u6211\u662Fh2"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", null, "\u829C\u6E56"), /*#__PURE__*/React.createElement("h2", null, "\u8D77\u98DE")), /*#__PURE__*/React.createElement("button", null, "\u6309\u94AE"), /*#__PURE__*/React.createElement("a", {
+            href: "http://www.baidu.com"
+          }, "\u767E\u5EA6"))
+        )
+      }
+    }
+
+    ReactDOM.render(<App />, document.querySelector("#app"))
+  </script>
+</body>
+
+</html>

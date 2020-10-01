@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>这里是</div>
+  <div id="app">hello world</div>
+  <div>开发练习</div>
+
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    let message = "Hello React";
+    function btnClick() {
+      if (message === "Hello React"){
+        message = "Hello World";
+      }else{
+        message = "Hello React"
+      }
+      
+      render();
+    }
+    function render(){
+      ReactDOM.render(
+      <div>
+        <h2>{message}</h2>
+        <button onClick={btnClick}>改变文字</button>  
+      </div>,
+      document.getElementById("app")
+    );
+    }
+
+    render();
+  </script>
+</body>
+</html>
